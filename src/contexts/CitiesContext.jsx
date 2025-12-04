@@ -82,7 +82,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  // Get existing City function
+  // Get existing City function - Using useCallback to make function stable and not recreated on every re-render
   const getCity = useCallback(
     async function getCity(id) {
       if (id === currentCity.id) return;

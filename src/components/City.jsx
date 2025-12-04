@@ -22,7 +22,7 @@ function City() {
     function () {
       getCity(id);
     },
-    [id]
+    [id, getCity] // Get city function must be stable and not recreated on every re-render
   );
 
   const { cityName, emoji, date, notes } = currentCity;
